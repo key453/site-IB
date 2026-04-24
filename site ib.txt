@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB SERVICE SARLU - BTP, Import-Export & Commerce à Pointe-Noire</title>
+    <!-- Chargement de Tailwind CSS pour un design moderne et réactif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chargement des icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        :root {
+            --primary-blue: #0f172a;
+            --accent-orange: #f97316;
+            --soft-gray: #f8fafc;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--soft-gray);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Arrière-plan de la section Hero avec image de logistique et BTP */
+        .hero-gradient {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7)), 
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        .btn-fancy {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-fancy:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255,255,255,0.1);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+        }
+
+        .btn-fancy:hover:after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <!-- Barre de Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-slate-900 flex items-center justify-center rounded-lg shadow-lg">
+                        <span class="text-white font-bold text-xl">IB</span>
+                    </div>
+                    <div class="text-xl font-extrabold text-slate-900 tracking-tight lowercase">
+                        service <span class="text-orange-600 uppercase">sarlu</span>
+                    </div>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-10 font-semibold text-sm uppercase tracking-wider text-slate-600">
+                    <a href="#accueil" class="hover:text-orange-600 transition-colors">Accueil</a>
+                    <a href="#services" class="hover:text-orange-600 transition-colors">Nos Activités</a>
+                    <a href="#maisons" class="hover:text-orange-600 transition-colors">BTP</a>
+                    <a href="#contact" class="bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg shadow-orange-200 hover:bg-orange-700 transition-all btn-fancy text-xs">Contact</a>
+                </div>
+
+                <!-- Menu Mobile (Icône) -->
+                <div class="md:hidden text-slate-900 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section d'Accueil (Hero) -->
+    <section id="accueil" class="hero-gradient min-h-screen flex items-center justify-center text-center text-white px-6">
+        <div class="max-w-5xl pt-20">
+            <span class="inline-block px-4 py-1 border border-orange-500 text-orange-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6 italic">BTP • IMPORT-EXPORT • COMMERCE GÉNÉRAL</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">Votre partenaire de confiance à <span class="text-orange-500 italic font-light text-6xl md:text-8xl">Pointe-Noire</span>.</h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                Depuis 2015, IB SERVICE SARLU excelle dans la construction, le négoce international et la fourniture de solutions commerciales au Congo.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="#services" class="bg-white text-slate-900 px-10 py-5 font-bold rounded-xl hover:bg-orange-600 hover:text-white transition-all shadow-2xl">Découvrir nos services</a>
+                <!-- Numéro de téléphone mis à jour -->
+                <a href="tel:+242069437781" class="bg-transparent border-2 border-white/30 backdrop-blur-sm px-10 py-5 font-bold rounded-xl hover:border-white transition-all">Nous appeler au 06 943 77 81</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Nos Services -->
+    <section id="services" class="py-24 bg-white relative -mt-16 rounded-t-[50px] z-10 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 uppercase">Nos Domaines d'Intervention</h2>
+                <div class="w-20 h-1.5 bg-orange-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- BTP -->
+                <div class="p-10 rounded-[40px] bg-slate-50 border border-slate-100 card-hover group">
+                    <div class="w-14 h-14 bg-orange-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-200">
+                        <i class="fas fa-hard-hat text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Construction & BTP</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Conception, rénovation et suivi de chantiers avec une expertise de 10 ans sur le terrain à Pointe-Noire.</p>
+                    <ul class="text-sm space-y-2 text-slate-600 font-semibold">
+                        <li><i class="fas fa-check text-orange-600 mr-2"></i> Architecture & Plans</li>
+                        <li><i class="fas fa-check text-orange-600 mr-2"></i> Gros œuvre & Finitions</li>
+                    </ul>
+                </div>
+
+                <!-- Import-Export -->
+                <div class="p-10 rounded-[40px] bg-slate-900 text-white border border-slate-800 card-hover group shadow-2xl">
+                    <div class="w-14 h-14 bg-white text-slate-900 rounded-2xl flex items-center justify-center mb-8 shadow-lg">
+                        <i class="fas fa-ship text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Import - Export</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">Solutions logistiques mondiales pour l'importation et l'exportation de marchandises diverses.</p>
+                    <ul class="text-sm space-y-2 text-slate-300 font-semibold">
+                        <li><i class="fas fa-check text-orange-500 mr-2"></i> Transit International</li>
+                        <li><i class="fas fa-check text-orange-500 mr-2"></i> Sourcing Produits</li>
+                    </ul>
+                </div>
+
+                <!-- Commerce Général -->
+                <div class="p-10 rounded-[40px] bg-slate-50 border border-slate-100 card-hover group">
+                    <div class="w-14 h-14 bg-orange-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-200">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Commerce Général</h3>
+                    <p class="text-slate-500 leading-relaxed mb-6">Vente et distribution de matériaux et produits de qualité pour les professionnels et particuliers.</p>
+                    <ul class="text-sm space-y-2 text-slate-600 font-semibold">
+                        <li><i class="fas fa-check text-orange-600 mr-2"></i> Négoce de matériaux</li>
+                        <li><i class="fas fa-check text-orange-600 mr-2"></i> Fournitures diverses</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informations Logistiques -->
+    <section class="py-20 bg-slate-100 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80" alt="Logistique Portuaire" class="rounded-[50px] shadow-2xl relative z-10">
+                        <div class="absolute -bottom-6 -right-6 bg-orange-600 text-white p-8 rounded-3xl z-20 shadow-xl hidden md:block">
+                            <span class="text-4xl font-black block">2015</span>
+                            <span class="text-xs font-bold uppercase tracking-widest">Fondation au Congo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-extrabold text-slate-900 uppercase mb-6">Une logistique <br><span class="text-orange-600">sans frontières</span></h2>
+                    <p class="text-slate-500 text-lg leading-relaxed mb-8">
+                        Grâce à notre emplacement stratégique à Pointe-Noire, nous facilitons vos échanges commerciaux internationaux. Que ce soit pour l'importation de technologies ou l'exportation de ressources locales, IB SERVICE SARLU assure la fluidité de vos opérations.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <i class="fas fa-globe-africa text-orange-600 text-xl mb-3"></i>
+                            <h4 class="font-bold text-sm uppercase">Global</h4>
+                            <p class="text-xs text-slate-400">Réseau mondial de partenaires</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <i class="fas fa-shield-alt text-orange-600 text-xl mb-3"></i>
+                            <h4 class="font-bold text-sm uppercase">Sécurisé</h4>
+                            <p class="text-xs text-slate-400">Transports assurés et suivis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réalisations (BTP) -->
+    <section id="maisons" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl font-extrabold text-slate-900 uppercase tracking-tight">Réalisations BTP</h2>
+                    <p class="text-slate-500 mt-4 text-lg">Découvrez la qualité de nos constructions à travers nos chantiers phares.</p>
+                </div>
+                <a href="#contact" class="text-orange-600 font-bold hover:underline">Nous contacter <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="group card-hover bg-slate-50 rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Villa moderne" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-2">Villa Côte Matève</h3>
+                        <p class="text-slate-500 text-sm">Livraison clés en main incluant l'importation des finitions de luxe.</p>
+                    </div>
+                </div>
+
+                <div class="group card-hover bg-slate-50 rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Résidence" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-2">Résidence Mpita</h3>
+                        <p class="text-slate-500 text-sm">Projet architectural ambitieux utilisant nos meilleurs matériaux de commerce.</p>
+                    </div>
+                </div>
+
+                <div class="group card-hover bg-slate-50 rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Duplex" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-extrabold text-slate-900 mb-2">Duplex Tchiniambi</h3>
+                        <p class="text-slate-500 text-sm">Le confort moderne allié à la robustesse de notre savoir-faire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div>
+                <h2 class="text-4xl font-extrabold uppercase mb-8">Partenaires de vos <span class="text-orange-500">réussites</span>.</h2>
+                <p class="text-slate-400 text-lg mb-12">BTP, Import-Export ou Commerce Général : un seul contact pour tous vos besoins au Congo.</p>
+                
+                <div class="grid grid-cols-2 gap-8 mb-12">
+                    <div>
+                        <div class="text-3xl font-extrabold text-orange-500 mb-1">100+</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-slate-400">Projets & Transactions</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-orange-500 mb-1">10 Ans</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-slate-400">D'expérience au Congo</div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <a href="tel:+242069437781" class="flex items-center group">
+                        <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mr-4 group-hover:bg-orange-600 transition-colors">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <span class="text-lg font-semibold">+242 06 943 77 81</span>
+                    </a>
+                    <a href="https://wa.me/242069437781" class="flex items-center group">
+                        <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mr-4 group-hover:bg-green-600 transition-colors">
+                            <i class="fab fa-whatsapp text-green-500 text-xl group-hover:text-white"></i>
+                        </div>
+                        <span class="text-lg font-semibold">Contact WhatsApp</span>
+                    </a>
+                    <div class="flex items-center group">
+                        <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt text-orange-500"></i>
+                        </div>
+                        <span class="text-lg font-semibold text-slate-300 italic">Pointe-Noire, Centre-ville, Congo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire de Contact Dynamique -->
+            <div class="bg-white rounded-[40px] p-10 text-slate-900 shadow-2xl">
+                <form onsubmit="event.preventDefault(); alert('Merci pour votre message ! IB SERVICE SARLU vous contactera au numéro indiqué sous peu.');">
+                    <div class="mb-6">
+                        <label class="block text-xs font-extrabold uppercase text-slate-400 mb-2">Service souhaité</label>
+                        <select class="w-full p-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-orange-600 transition-all outline-none font-semibold">
+                            <option>BTP / Construction</option>
+                            <option>Import - Export</option>
+                            <option>Commerce Général</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-xs font-extrabold uppercase text-slate-400 mb-2">Nom & Prénom</label>
+                        <input type="text" class="w-full p-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-orange-600 transition-all outline-none" placeholder="Votre nom complet" required>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-xs font-extrabold uppercase text-slate-400 mb-2">Téléphone</label>
+                        <input type="tel" class="w-full p-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-orange-600 transition-all outline-none" placeholder="Votre numéro" required>
+                    </div>
+                    <div class="mb-8">
+                        <label class="block text-xs font-extrabold uppercase text-slate-400 mb-2">Détails de votre projet</label>
+                        <textarea rows="4" class="w-full p-4 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-orange-600 transition-all outline-none" placeholder="Décrivez votre besoin en BTP, Import ou Commerce..."></textarea>
+                    </div>
+                    <button class="w-full bg-orange-600 text-white font-extrabold py-5 rounded-2xl hover:bg-orange-700 transition-all shadow-xl uppercase tracking-widest text-sm">Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page (Footer) -->
+    <footer class="py-12 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-slate-900 flex items-center justify-center rounded-md">
+                    <span class="text-white font-bold text-sm">IB</span>
+                </div>
+                <div class="text-lg font-black text-slate-900 uppercase">
+                    SERVICE <span class="text-orange-600">SARLU</span>
+                </div>
+            </div>
+            <div class="text-slate-400 text-sm font-medium">
+                © 2015-2025 IB SERVICE SARLU - BTP, Import-Export & Commerce. Pointe-Noire, Congo.
+            </div>
+            <div class="flex space-x-6 text-slate-400 text-xl">
+                <a href="#" class="hover:text-orange-600 transition-colors"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/242069437781" class="hover:text-orange-600 transition-colors"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
